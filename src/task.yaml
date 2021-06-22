@@ -1,11 +1,18 @@
 name: 'get_device_meta'
 description: 'Get the ABNF definition for the EnergyWeb DID'
-input:
-  environment:
-    - address: '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
-    - method: 'ethr'
-output:
-  - DID
+inputs:
+  address:
+    protocol: environment
+    required: true
+  method:
+    protocol: environment
+    required: true
+    default: 'ethr'
+outputs:
+  DID:
+    protocol: MDP/Worker
+
 runs:
-  keep_alive: True
-  main: './main.py'
+  main: 
+    path: './main.py'
+    keep_alive: true
