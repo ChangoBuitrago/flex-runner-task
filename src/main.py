@@ -1,8 +1,8 @@
 import logging
 from typing import List
+from core.mdpio import CoreIO
 
-
-def run(core):
+def run(core:CoreIO):
     try:
         # get task inputs
         inputs:List = core.get_inputs()

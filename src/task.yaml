@@ -10,6 +10,7 @@ inputs:
     default: 'ethr'
 outputs:
   DID:
+    # https://rfc.zeromq.org/spec/7/
     protocol: MDP/Worker
 
 runs:
