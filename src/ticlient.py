@@ -33,8 +33,8 @@ def main():
     verbose = '-v' in sys.argv
     session = MajorDomoClient("tcp://localhost:5555", verbose)
 
-    #  1. Send 'get_device_DID' request to Titanic
-    request = [b"get_device_DID", b"DID"]
+    #  1. Send 'get_device_meta' request to Titanic
+    request = [b"get_device_meta.outputs", b"DID"]
     reply = service_call(session, b"titanic.request", request)
 
     uuid = None

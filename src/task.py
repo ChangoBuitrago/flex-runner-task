@@ -73,8 +73,8 @@ class Task(CoreIO):
 
 
 async def main():   
-    print("Running task")
-    threading.Thread(target=Task(name="get_device_DID", keep_alive=False).run).start()
+    print("Running 'get_device_meta' task")
+    threading.Thread(target=Task(name="get_device_meta", keep_alive=True).run).start()
 
 
 asyncio.run(main())

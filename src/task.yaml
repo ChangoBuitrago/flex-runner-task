@@ -1,4 +1,4 @@
-name: 'get_device_DID'
+name: 'get_device_meta'
 description: 'Get the ABNF definition for the EnergyWeb DID'
 input:
   environment:
