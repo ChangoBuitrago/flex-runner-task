@@ -3,6 +3,7 @@ from setuptools import setup, find_packages
 install_requires = [
     "pyzmq==22.1.0",
     "reindent==3.5.1",
+    "PyYAML==5.4.1",
 ]
 
 setup(

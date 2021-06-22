@@ -14,5 +14,5 @@ outputs:
 
 runs:
   main: 
-    path: './main.py'
+    path: './src/main.py'
     keep_alive: true
