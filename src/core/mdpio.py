@@ -55,26 +55,3 @@ class CoreIO():
     def set_outputs(self, outputs:List):
         while True:
             self.rep_socket.recv(outputs, self.keep_alive)
-
-
-class Task(CoreIO):
-    def run(self):
-        try:
-            # get task inputs
-            inputs:List = self.get_inputs()
-
-            # Get the ABNF definition for the EnergyWeb DID
-            DID:str = "did:{}:{}".format(inputs["method"], inputs["address"])
-
-            # set task outputs
-            self.set_outputs([DID.encode("utf-8")])
-        except Exception as error:
-            logging.error(error)
-
-
-async def main():   
-    print("Running 'get_device_meta' task")
-    threading.Thread(target=Task(name="get_device_meta", keep_alive=True).run).start()
-
-
-asyncio.run(main())

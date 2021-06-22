@@ -8,4 +8,4 @@ output:
   - DID
 runs:
   keep_alive: True
-  main: 'main.py'
+  main: './main.py'
