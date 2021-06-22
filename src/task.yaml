@@ -1,0 +1,11 @@
+name: 'get_device_DID'
+description: 'Get the ABNF definition for the EnergyWeb DID'
+input:
+  environment:
+    - address: '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
+    - method: 'ethr'
+output:
+  - DID
+runs:
+  keep_alive: True
+  main: 'main.py'
